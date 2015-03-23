@@ -33,7 +33,7 @@ angular
       })
       .when('/videos', {
         templateUrl: 'views/videos.html',
-        controller: 'AboutCtrl'
+        controller: 'VideosCtrl'
       })
       .otherwise({
         redirectTo: '/'
