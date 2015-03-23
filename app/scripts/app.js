@@ -29,7 +29,7 @@ angular
       })
       .when('/papers', {
         templateUrl: 'views/papers.html',
-        controller: 'AboutCtrl'
+        controller: 'PapersCtrl'
       })
       .when('/videos', {
         templateUrl: 'views/videos.html',
