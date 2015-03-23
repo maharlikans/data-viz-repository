@@ -40,9 +40,9 @@
 
             <ul class="nav navbar-nav" ng-controller="MainCtrl as main">
               <li ng-class="{active: isNavActive(1)}" ng-click="setNavActive(1)"><a href="#/">{{ nav[0] }}</a></li>
-              <li ng-class="{active: isNavActive(2)}" ng-click="setNavActive(2)"><a href="#/">{{ nav[1] }}</a></li>
-              <li ng-class="{active: isNavActive(3)}" ng-click="setNavActive(3)"><a href="#/">{{ nav[2] }}</a></li>
-              <li ng-class="{active: isNavActive(4)}" ng-click="setNavActive(4)"><a href="#/">{{ nav[3] }}</a></li>
+              <li ng-class="{active: isNavActive(2)}" ng-click="setNavActive(2)"><a href="#/{{ nav[1] | lowercase}}">{{ nav[1] }}</a></li>
+              <li ng-class="{active: isNavActive(3)}" ng-click="setNavActive(3)"><a href="#/{{ nav[2] | lowercase}}">{{ nav[2] }}</a></li>
+              <li ng-class="{active: isNavActive(4)}" ng-click="setNavActive(4)"><a href="#/{{ nav[3] | lowercase}}">{{ nav[3] }}</a></li>
             </ul>
           </div>
         </div>
