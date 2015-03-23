@@ -9,9 +9,13 @@
  */
 angular.module('dataVizRepositoryApp')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+    $scope.active = 1;
+    $scope.nav = ["Home", "Links", "Papers", "Videos"];
+    $scope.isNavActive = function(isNavActive) {
+      return isNavActive === $scope.active;
+    };
+    $scope.setNavActive = function(setNavActive) {
+      $scope.active = setNavActive;
+    };
+
   });
