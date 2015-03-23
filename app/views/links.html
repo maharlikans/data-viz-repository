@@ -1,33 +1,10 @@
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-4" ng-repeat="link in links">
     <div class="panel panel-default">
       <div class="panel-body">
-        <h3><a href>Title of link</a></h3>
+        <h3><a href="{{link.url}}" target="_blank">{{link.title}}</a></h3>
         <p>
-        This link was super useful when i was stuck on a ton of things in my
-        project and i found that i didn't need to struggle with basic html boxes.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h3><a href>Title of link</a></h3>
-        <p>
-        This link was super useful when i was stuck on a ton of things in my
-        project and i found that i didn't need to struggle with basic html boxes.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <h3><a href>Title of link</a></h3>
-        <p>
-        This link was super useful when i was stuck on a ton of things in my
-        project and i found that i didn't need to struggle with basic html boxes.
+          {{link.description}}
         </p>
       </div>
     </div>

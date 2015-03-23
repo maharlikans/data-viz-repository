@@ -25,7 +25,7 @@ angular
       })
       .when('/links', {
         templateUrl: 'views/links.html',
-        controller: 'AboutCtrl'
+        controller: 'LinksCtrl'
       })
       .when('/papers', {
         templateUrl: 'views/papers.html',
