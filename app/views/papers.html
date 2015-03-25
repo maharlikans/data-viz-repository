@@ -3,8 +3,8 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <h3><a href="{{paper.url}}" target="_blank">{{paper.title}}</a></h3>
-        <p>
-          {{paper.abs}}
+        <p ng-repeat="author in paper.authors">
+          {{author}}
         </p>
       </div>
     </div>

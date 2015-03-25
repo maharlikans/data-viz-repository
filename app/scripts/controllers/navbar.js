@@ -8,10 +8,10 @@
  * Controller of the dataVizRepositoryApp
  */
 angular.module('dataVizRepositoryApp')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('NavbarCtrl', function ($scope, $location) {
+    this.nav = ['Home', 'Links', 'Papers', 'Videos'];
+
+    this.isNavActive = function (viewLocation) { 
+        return viewLocation === $location.path();
+    };
   });

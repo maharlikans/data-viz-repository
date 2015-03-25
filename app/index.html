@@ -33,16 +33,16 @@
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">dataVizRepository</a>
+            <a class="navbar-brand" href="#/">Data Visualization Repository</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
-            <ul class="nav navbar-nav" ng-controller="MainCtrl as main">
-              <li ng-class="{active: isNavActive(1)}" ng-click="setNavActive(1)"><a href="#/">{{ nav[0] }}</a></li>
-              <li ng-class="{active: isNavActive(2)}" ng-click="setNavActive(2)"><a href="#/{{ nav[1] | lowercase}}">{{ nav[1] }}</a></li>
-              <li ng-class="{active: isNavActive(3)}" ng-click="setNavActive(3)"><a href="#/{{ nav[2] | lowercase}}">{{ nav[2] }}</a></li>
-              <li ng-class="{active: isNavActive(4)}" ng-click="setNavActive(4)"><a href="#/{{ nav[3] | lowercase}}">{{ nav[3] }}</a></li>
+            <ul class="nav navbar-nav" ng-controller="NavbarCtrl as nbc">
+              <li ng-class="{active: nbc.isNavActive('/')}"><a href="#/">{{ nbc.nav[0] }}</a></li>
+              <li ng-class="{active: nbc.isNavActive('/{{ nbc.nav[1] | lowercase}}')}"><a href="#/{{ nbc.nav[1] | lowercase}}">{{ nbc.nav[1] }}</a></li>
+              <li ng-class="{active: nbc.isNavActive('/{{ nbc.nav[2] | lowercase}}')}"><a href="#/{{ nbc.nav[2] | lowercase}}">{{ nbc.nav[2] }}</a></li>
+              <li ng-class="{active: nbc.isNavActive('/{{ nbc.nav[3] | lowercase}}')}"><a href="#/{{ nbc.nav[3] | lowercase}}">{{ nbc.nav[3] }}</a></li>
             </ul>
           </div>
         </div>
@@ -85,13 +85,14 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/links.js"></script>
-        <script src="scripts/controllers/papers.js"></script>
-        <script src="scripts/controllers/videos.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/links.js"></script>
+    <script src="scripts/controllers/papers.js"></script>
+    <script src="scripts/controllers/videos.js"></script>
+    <script src="scripts/controllers/navbar.js"></script>
+    <script src="scripts/controllers/chunk.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
